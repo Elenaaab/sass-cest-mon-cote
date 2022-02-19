@@ -1,19 +1,18 @@
 import React from 'react';
 
-import Form from '../Form/Form';
-import Bed from '../Bed/Bed';
-import Title from '../Title/Title';
+import { Form }from '../Form/Form';
+import { Bed } from '../Bed/Bed';
+import { Title }from '../Title/Title';
 
 import './App.scss';
+import { AppPropsTypes } from '../type';
 
-function App() {
+export const App: React.FC<AppPropsTypes> = () =>{
   return (
-    <div>
+  <div>
       <Title/>
       <Form/>
       <Bed/>
     </div>
   );
 }
-
-export default App;

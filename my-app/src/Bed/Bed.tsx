@@ -1,15 +1,13 @@
 import React from 'react';
+import { BedPropsTypes } from '../type';
 
 import './Bed.scss';
 
 
-
-function Bed() {
+export const Bed: React.FC<BedPropsTypes> = () => {
   return (
     <div>
-      <h1>COUCOU BED</h1>
+      <h1>COUCOU Bed</h1>
     </div>
   );
 }
-
-export default Bed;
