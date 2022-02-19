@@ -21,3 +21,11 @@ export interface BedPropsTypes {
 export interface TitlePropsTypes {
 
 }
+
+export interface FieldPropsTypes {
+  value: React.HTMLInputTypeAttribute,
+  type: React.HTMLInputTypeAttribute | undefined,
+  name: string,
+  placeholder: string | undefined,
+  manageChange(any, name): void,
+}
