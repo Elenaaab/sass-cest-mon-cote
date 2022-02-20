@@ -1,1 +1,16 @@
 // Le formulaire doit être en dflex en plusieurs row : les fields / personne et le lit donc 3 rows en tout.
+
+
+.Form {
+
+  display:flex;
+  flex-direction: column;
+  margin:5rem 10 rem 5rem 10rem;
+  width:50%;
+
+  &__row {
+
+    display:flex;
+    flex-direction: row;
+  }
+}

@@ -46,6 +46,13 @@
     background-color: green;
     height:80%;
 
+    &--selected span {
+
+    background-color: orange;
+    // On peut tenter de changer ses dimensions en condition plutôt que d'en faire 12 en fait
+      
+    }
+
     &--fold {
 
       background-color: rgb(5, 185, 5); 
