@@ -7,30 +7,30 @@ import './Form.scss';
 export const Form: React.FC<FormPropsTypes> = () => {
   return (
     <div>
-      <h1>COUCOU Form</h1>
+      <h3>Renseigne tes infos ici :</h3>
       <form>
-        <h4>Ton poids</h4>
-        <Field value={''} type={undefined} name={'weight1'} placeholder={undefined} manageChange={function (): void {
+        <label>Ton poids</label>
+        <Field value={''} type={undefined} name={'weight1'} placeholder={'poids en kg'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
-        <h4>Ta taille</h4>
-        <Field value={''} type={undefined} name={'height1'} placeholder={undefined} manageChange={function (): void {
+        <label>Ta taille</label>
+        <Field value={''} type={undefined} name={'height1'} placeholder={'taille en cm'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
-        <h4>Son poids</h4>
-        <Field value={''} type={undefined} name={'weight2'} placeholder={undefined} manageChange={function (): void {
+        <label>Son poids</label>
+        <Field value={''} type={undefined} name={'weight2'} placeholder={'poids en kg'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
-        <h4>Sa taille</h4>
-        <Field value={''} type={undefined} name={'height2'} placeholder={undefined} manageChange={function (): void {
+        <label>Sa taille</label>
+        <Field value={''} type={undefined} name={'height2'} placeholder={'taille en cm'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
-        <h4>Les dimensions du lit</h4>
-        <Field value={''} type={undefined} name={'bedSizeWeight'} placeholder={undefined} manageChange={function (): void {
+        <label>Les dimensions du lit</label>
+        <Field value={''} type={undefined} name={'bedSizeWeight'} placeholder={'largeur en cm'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
         <span>X</span>
-        <Field value={''} type={undefined} name={'bedSizeHeight'} placeholder={undefined} manageChange={function (): void {
+        <Field value={''} type={undefined} name={'bedSizeHeight'} placeholder={'longueur en cm'} manageChange={function (): void {
           throw new Error('Function not implemented.');
         } } />
       </form>
