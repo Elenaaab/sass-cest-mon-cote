@@ -1,0 +1,28 @@
+@use 'src/utils/variables';
+
+
+// Shadow 
+
+@mixin titleShadow($color) {
+  @if ( lightness($color) < 25% ) {
+    $color: lighten($color, 20%); 
+  }@else{
+    $color: darken($color, 20%);
+  }
+  text-shadow: 2px 2px 1px $color;
+  text-align: center;
+}
+
+// Title Style
+
+// Ici on fait un get map pour avoir la font size, font weight:
+
+// @mixin fontStyle($fontValues) {
+//     @each $state, $titleStyleInfos in $fontValues{
+//       &:#{$state}{
+//       font-size: map-get($titleStyleInfos, size);
+//       font-weight: map-get($titleStyleInfos, weight);
+//       }
+//     }
+// }
+
