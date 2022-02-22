@@ -1,28 +1,32 @@
 // Colors : 
 
-$color-title : rgb(39, 83, 10);
+$color-title : #27530a;
 $color-subtitle : pink;
+$color-label : red;
+$color-input: yellow;
 
-// Font Values : 
+// Sizes : 
 
+$shadow-values : 2px 2px 1px;
+$form-margin-values : 5rem 10rem;
+
+// Text Values : 
 
 $titleInfos: (
   size: 4rem,
   weight: bold,
-)
+);
 
-// $fontValues : (
+$formLabel: (
+  size: 1rem,
+  weight: bold,
+  color: $color-label,
+);
 
-// $titleStyleInfos: (
-//   size: 8rem,
-//   weight: bold,
-// ),
+$formInput: (
+  size: 2rem,
+  weight: light,
+  color: $color-input,
+);
 
-// $textStyleInfos: (
-//   size: 5rem,
-//   weight: light,
-
-// )
-
-// )
 
