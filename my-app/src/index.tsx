@@ -8,7 +8,7 @@ import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App Title={undefined} Bed={undefined} Form={undefined} />
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );

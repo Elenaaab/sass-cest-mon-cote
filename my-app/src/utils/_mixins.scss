@@ -1,7 +1,7 @@
 @use 'src/utils/variables';
 
 
-// Shadow 
+// Title Shadow (condition)
 
 @mixin titleShadow($color) {
   @if ( lightness($color) < 25% ) {
@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-// Form
+// Form Style (map-get)
 
 @mixin formStyle($form) {
       font-size: map-get($form, size);
@@ -21,7 +21,23 @@
       color: map-get($form, color);
     }
 
-// Ca c'est pour créer un pseudo sélecteur d'état donc plutôt pour le bed : 
+// Form Position (simple values)
+
+  @mixin formContainer() {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+// Form Field
+
+
+
+//  Bed(for loop)
+
+// Ca c'est pour créer un pseudo sélecteur d'état donc plutôt pour le bed pour réagir aux conditions des values entrées dans le form : 
+
 // @mixin bedStyle($form) {
 //     @each $key, $value in $form{
 //       &:#{$key}{

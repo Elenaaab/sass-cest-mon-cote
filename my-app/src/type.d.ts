@@ -1,17 +1,16 @@
-import { ReactComponentElement } from "react";
 
 export interface AppPropsTypes {
-  // FormPropsTypes: {},
-  // BedPropsTypes: {},
-  // TitlePropsTypes: {},
-  Title:ReactComponentElement | undefined,
-  Bed:ReactComponentElement | undefined,
-  Form:ReactComponentElement | undefined,
+
 }
 
 
 export interface FormPropsTypes {
-
+weight1: React.HTMLInputTypeAttribute,
+weight2: React.HTMLInputTypeAttribute,
+height1 : React.HTMLInputTypeAttribute,
+height2 : React.HTMLInputTypeAttribute,
+bedSize : React.HTMLInputTypeAttribute,
+changeField() : void,
 }
 
 export interface BedPropsTypes {
