@@ -1,16 +1,27 @@
 @use 'src/utils/variables';
 
 
-// Title Shadow (condition)
+// Color Shadow (condition)
 
-@mixin titleShadow($color) {
-  @if ( lightness($color) < 25% ) {
-    $color: lighten($color, 20%); 
-  }@else{
-    $color: darken($color, 20%);
-  }
-  text-shadow: variables.$shadow-values $color;
-  text-align: center;
+@mixin colorShadow($color) {
+    text-align: center;
+    @if ( lightness($color) < 25% ) {
+      $color: lighten($color, 20%); 
+    }@else{
+      $color: darken($color, 20%);
+    }
+    text-shadow: variables.$shadow-values $color;
+}
+
+// Background Color (condition)
+
+@mixin backgroundColor($color) {
+    @if ( lightness($color) < 25% ) {
+      $color: lighten($color, 90%); 
+    }@else{
+      $color: darken($color, 90%);
+    }
+    background-color: $color;
 }
 
 // Form Style (map-get)
@@ -21,16 +32,22 @@
       color: map-get($form, color);
     }
 
+// Subtitle Style (map-get)
+
+@mixin titleStyle($title) {
+  font-size: map-get($title, size2);
+  font-weight: map-get($title, weight);
+  font-family: map-get($title, font);
+}
+
 // Form Position (simple values)
 
   @mixin formContainer() {
     display:flex;
     justify-content: center;
     align-items: center;
-
   }
 
-// Form Field
 
 
 
