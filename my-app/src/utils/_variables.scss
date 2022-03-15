@@ -2,7 +2,8 @@
 
 // Colors : 
 
-$color-title : #27530a;
+$color-title : #770471;
+$color-background: rgb(51, 49, 49);
 $color-subtitle : pink;
 $color-label : red;
 $color-input: rgb(17, 17, 17);
@@ -22,14 +23,14 @@ $titleInfos: (
 );
 
 $formLabel: (
-  size: 1.2rem,
+  size: 1rem,
   weight: bold,
   color: $color-label,
 );
 
 $formInput: (
   size: 1rem,
-  weight: regular,
+  weight: 400,
   color: $color-input,
 );
 

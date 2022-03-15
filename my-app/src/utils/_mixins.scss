@@ -24,6 +24,17 @@
     background-color: $color;
 }
 
+// Sheet Color (condition)
+
+@mixin sheetColor($color) {
+  @if ( lightness($color) < 25% ) {
+    $color: lighten($color, 90%); 
+  }@else{
+    $color: darken($color, 90%);
+  }
+  background-color: $color;
+}
+
 // Form Style (map-get)
 
 @mixin formStyle($form) {

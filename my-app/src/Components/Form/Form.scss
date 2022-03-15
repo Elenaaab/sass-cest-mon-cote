@@ -1,0 +1,25 @@
+@use 'src/utils/variables';
+@use 'src/utils/mixins';
+
+
+.Form {
+
+  @include mixins.formContainer();
+  flex-direction: column;
+
+  &__title {
+    @include mixins.colorShadow(variables.$color-subtitle);
+    color: variables.$color-subtitle;
+    justify-content: center;
+  }
+
+  &__row {
+
+    @include mixins.formContainer();
+    flex-direction: row;  
+
+      & label {
+          @include mixins.formStyle(variables.$formLabel);
+      }
+  }
+}
