@@ -1,30 +1,20 @@
 
-export interface AppPropsTypes {
-
+export interface FormPropsTypes {
+  weight1 : undefined | string;
+  weight2 : undefined | string;
+  height1 : undefined | string;
+  height2 : undefined | string;
+  bedSize : undefined | string;
 }
 
-
-export interface FormPropsTypes {
-weight1: React.HTMLInputTypeAttribute,
-weight2: React.HTMLInputTypeAttribute,
-height1 : React.HTMLInputTypeAttribute,
-height2 : React.HTMLInputTypeAttribute,
-bedSize : React.HTMLInputTypeAttribute,
-changeField() : void,
+export interface FieldPropsTypes {
+  value : undefined | string,
+  type : string,
+  name : string,
+  placeholder : string,
 }
 
 export interface BedPropsTypes {
 
 }
 
-export interface TitlePropsTypes {
-
-}
-
-export interface FieldPropsTypes {
-  value: React.HTMLInputTypeAttribute,
-  type: React.HTMLInputTypeAttribute | undefined,
-  name: string,
-  placeholder: string | undefined,
-  manageChange(any, name): void,
-}
