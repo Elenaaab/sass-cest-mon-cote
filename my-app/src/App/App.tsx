@@ -6,7 +6,7 @@ export const App: React.FC = () =>{
   return (
   <div>
       <Title/>
-      <Form weight1={undefined} weight2={undefined} height1={undefined} height2={undefined} bedSize={undefined} />
+      <Form newValue={{}} />
       <Bed/>
     </div>
   );

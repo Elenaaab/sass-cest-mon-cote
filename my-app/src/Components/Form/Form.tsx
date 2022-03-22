@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { FormPropsTypes } from '../../type';
-import { Field } from './Field/Field';
 
 import './Form.scss';
 
-// Je peux enregistrer les résultats des personnes dans des tuples
-// C'est quoi et ça fait quoi changefield ??
+export const Form: React.FC<FormPropsTypes> = () => {
 
-export const Form: React.FC<FormPropsTypes> = ({ weight1, weight2, height1, height2, bedSize }) => {
+  let [newValue, setNewValue] = useState({weight1:"",weight2:"",height1:"",height2:"",bedSize:""});
+
+  const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
+    setNewValue({...newValue,[event.target.name]:event.target.value});
+  };
+  console.log(newValue);
 
   return (
     <div>
@@ -14,19 +18,29 @@ export const Form: React.FC<FormPropsTypes> = ({ weight1, weight2, height1, heig
       <form className="Form">
         <div className="Form__row">
           <label>Ton poids</label>
-          <Field value={weight1} name='weight1' placeholder='poids en kg'  type='info' />
+          <input value={newValue.weight1||''} className="Form__input"
+          name='weight1' placeholder='en kg' type='info' onChange={handleChange}
+          />
           <label>Ta taille</label>
-          <Field value={height1} name='height1' placeholder='taille en cm' type='info'  />
+          <input value={newValue.height1||''} className="Form__input" 
+          name='height1' placeholder='en cm' type='info' onChange={handleChange}
+ />
         </div>
         <div className="Form__row">
           <label>Son poids</label>
-          <Field value={weight2} name='weight2' placeholder='poids en kg' type='info'  />
+          <input value={newValue.weight2||''} className="Form__input" 
+          name='weight2' placeholder='en kg' type='info' onChange={handleChange}
+ />
           <label>Sa taille</label>
-          <Field value={height2} name='height2' placeholder='taille en cm' type='info'  />
+          <input value={newValue.height2||''} className="Form__input" 
+          name='height2' placeholder='en cm' type='info' onChange={handleChange}
+  />
         </div>
         <div className="Form__row">
           <label>Largeur du lit</label>
-          <Field value={bedSize} name='bedSizeWeight' placeholder='largeur en cm' type='info'  />
+          <input value={newValue.bedSize||''} className="Form__input" 
+          name='bedSize' placeholder='en cm' type='info' onChange={handleChange}
+  />
         </div>
       </form>
     </div>

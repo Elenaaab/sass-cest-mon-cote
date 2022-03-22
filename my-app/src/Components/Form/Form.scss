@@ -22,4 +22,17 @@
           @include mixins.formStyle(variables.$formLabel);
       }
   }
+
+    &__input {
+      @include mixins.formStyle(variables.$formInput);
+      padding: 0.2em 1em;
+      width:4em;
+      border: none;
+      background-color: transparent;
+      font-size: variables.$font-size;
+  
+      &:focus {
+        @include mixins.backgroundColor(variables.$color-input);
+      }
+}
 }
