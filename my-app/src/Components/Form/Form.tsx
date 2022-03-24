@@ -1,16 +1,16 @@
 import { useState } from 'react';
-import { FormPropsTypes } from '../../type';
+import { PropsTypes } from '../../type';
+import { Bed }from './Bed/Bed';
 
 import './Form.scss';
 
-export const Form: React.FC<FormPropsTypes> = () => {
+export const Form: React.FC<PropsTypes> = () => {
 
   let [newValue, setNewValue] = useState({weight1:"",weight2:"",height1:"",height2:"",bedSize:""});
 
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setNewValue({...newValue,[event.target.name]:event.target.value});
   };
-  console.log(newValue);
 
   return (
     <div>
@@ -43,6 +43,7 @@ export const Form: React.FC<FormPropsTypes> = () => {
   />
         </div>
       </form>
+      <Bed newValue={newValue}/>
     </div>
   );
 }

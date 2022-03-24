@@ -33,7 +33,6 @@
     height:25%;
   }
 
-
   // Mixin pour couleur oreillers, drap et pli drap plus clair
   
   &__pillow {
@@ -43,9 +42,6 @@
     height:5rem;
     width: 9rem;
     margin: 0.5rem;
-
-    &--selected {
-      }
   }
 
   &__sheet {
@@ -53,16 +49,19 @@
     background-color: variables.$color-title;
     height:80%;
 
-    &--selected span {
-
-    // On peut tenter de changer ses dimensions en condition plutôt que d'en faire 12 en fait
-      
-    }
-
     &--fold {
-      // On peut calculer la couleur via une mixin de condition qui existe déjà
       background-color: variables.$color-subtitle; 
       height:20%;
     }
   }
+  
+  &__result {
+
+    display: inline-block;
+    background-color: green; 
+    height:80%;
+    // On va changer la width en condition
+    width: 5rem;
+
+    }
 }
