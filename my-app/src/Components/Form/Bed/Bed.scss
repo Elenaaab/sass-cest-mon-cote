@@ -1,15 +1,6 @@
 @use 'src/utils/variables';
 @use 'src/utils/mixins';
 
-// Ici plusieurs challenges, en essayant d'être le plus DRY possible ! 
-
-// Gérer dynamiquement les couleurs des div (en fonction de la value reçue)
-// On ne donne pas des classes à tous les éléments, on utilise le nesting
-
-// Par exemple on peut faire une mixin pour déterminer la couleur de background des éléments
-// Aussi pour margin et padding  
-// CSS provisoire pour le positionnement en BEM : 
-
 .Bed {
 
   &__container {
@@ -32,8 +23,6 @@
     padding:0.3rem;
     height:25%;
   }
-
-  // Mixin pour couleur oreillers, drap et pli drap plus clair
   
   &__pillow {
 
@@ -42,6 +31,13 @@
     height:5rem;
     width: 9rem;
     margin: 0.5rem;
+
+    &--result {
+      display: inline-block;
+      height:100%;
+      border-radius: 20%;
+      background-color: variables.$color-subtitle; 
+      }
   }
 
   &__sheet {
@@ -58,10 +54,10 @@
   &__result {
 
     display: inline-block;
-    background-color: green; 
+    background-color: variables.$color-subtitle; 
     height:80%;
-    // On va changer la width en condition
-    width: 5rem;
-
+    color:variables.$color-title;
+    font-weight: bold;
+    text-align: center;
     }
 }
