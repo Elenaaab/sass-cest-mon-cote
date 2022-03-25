@@ -32,7 +32,9 @@
       font-size: variables.$font-size;
   
       &:focus {
-        @include mixins.backgroundColor(variables.$color-input);
+        background-color: transparent;
+
+
       }
 }
 }

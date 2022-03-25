@@ -1,15 +1,36 @@
 @use 'src/utils/variables';
 @use 'src/utils/mixins';
 
-.Bed {
+// Faire une mixin pour head et bottom :
 
+.Room__container {
+  display: flex;
+  justify-content: center;
+
+  .Head {
+
+  background-color: variables.$color-label;
+  border: 0.5rem solid variables.$color-input;
+  margin: 5rem auto -2rem auto;
+  width: 25rem;
+}
+
+.Bottom {
+
+  background-color: variables.$color-label;
+  border: 0.5rem solid variables.$color-input;
+  margin: -2.5rem auto;
+  width: 22rem;
+}
+
+.Bed {
+  
   &__container {
 
   display:flex;
   flex-direction: column;
   background-color: variables.$color-label;
-  border: 1rem solid variables.$color-input;
-  border-radius: 5%;
+  border: 0.7rem solid variables.$color-input;
   padding:0.5rem;
   margin: 2rem auto;
   height:25rem;
@@ -27,7 +48,7 @@
   &__pillow {
 
     background-color: variables.$color-title;
-    border-radius: 20%;
+    border-radius: 10%;
     height:5rem;
     width: 9rem;
     margin: 0.5rem;
@@ -35,29 +56,32 @@
     &--result {
       display: inline-block;
       height:100%;
-      border-radius: 20%;
+      border-radius: 10%;
       background-color: variables.$color-subtitle; 
       }
   }
 
   &__sheet {
-
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
     background-color: variables.$color-title;
     height:80%;
 
     &--fold {
       background-color: variables.$color-subtitle; 
-      height:20%;
+      height:20%;    
+      border-top-left-radius: 5%;
+      border-top-right-radius: 5%;
     }
   }
   
   &__result {
-
+    @include mixins.colorShadow(variables.$color-subtitle);
     display: inline-block;
     background-color: variables.$color-subtitle; 
     height:80%;
-    color:variables.$color-title;
     font-weight: bold;
     text-align: center;
     }
+}
 }

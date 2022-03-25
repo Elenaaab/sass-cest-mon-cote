@@ -16,6 +16,9 @@ let result = bedCalc(person1, person2);
 let bedPart = Math.ceil(result*bed);
   
   return (
+    <div className="Room__container">
+    <div className="Bed">
+    <div className="Head"></div>
     <div className="Bed__container">
       <div className="Bed__head">
       <div className="Bed__pillow">
@@ -28,6 +31,9 @@ let bedPart = Math.ceil(result*bed);
       <span style={{"width": Math.ceil(100*result)+"%"}} className="Bed__result">{bedPart?"Tu as droit à "+bedPart+"cm":''}</span>
       </div>
     </div>
+    <div className="Bottom"></div>
+    </div>
+   </div> 
   );
 }
 
