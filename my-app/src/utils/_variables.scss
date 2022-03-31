@@ -4,7 +4,8 @@
 
 $color-title :  #ff766c;
 $color-background: #342b4a;
-$color-subtitle :  #ce5d55;
+$color-subtitle :  #d34c42;
+$color-form :  #ce5d55;
 $color-label : #5f458b;
 $color-input: #1c152c;
 
@@ -12,11 +13,12 @@ $color-input: #1c152c;
 
 $shadow-values : 2px 2px 1px;
 $font-size: 1em;
+$form-border: 0.5rem solid #1c152c;
 
 // Text Values : 
 
 $titleInfos: (
-  size1: 4rem,
+  size1: 5rem,
   size2: 3rem,
   weight: bold,
   font: 'Fira Sans',

@@ -8,8 +8,9 @@
   flex-direction: column;
 
   &__title {
-    @include mixins.colorShadow(variables.$color-subtitle);
-    color: variables.$color-subtitle;
+
+    @include mixins.colorShadow(variables.$color-form);
+    color: variables.$color-form;
     justify-content: center;
   }
 
@@ -24,6 +25,7 @@
   }
 
     &__input {
+      
       @include mixins.formStyle(variables.$formInput);
       padding: 0.2em 1em;
       width:4em;
@@ -36,5 +38,5 @@
 
 
       }
-}
+    }
 }

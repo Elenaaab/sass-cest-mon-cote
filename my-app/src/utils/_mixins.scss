@@ -28,9 +28,9 @@
 
 @mixin sheetColor($color) {
   @if ( lightness($color) < 25% ) {
-    $color: lighten($color, 90%); 
+    $color: lighten($color, 80%); 
   }@else{
-    $color: darken($color, 90%);
+    $color: darken($color, 80%);
   }
   background-color: $color;
 }
@@ -58,21 +58,4 @@
     justify-content: center;
     align-items: center;
   }
-
-
-
-
-//  Bed(for loop)
-
-// Ca c'est pour créer un pseudo sélecteur d'état donc plutôt pour le bed pour réagir aux conditions des values entrées dans le form : 
-
-// @mixin bedStyle($form) {
-//     @each $key, $value in $form{
-//       &:#{$key}{
-//       font-size: map-get($value, size);
-//       font-weight: map-get($value, weight);
-//       color: map-get($value, color);
-//       }
-//     }
-// }
 

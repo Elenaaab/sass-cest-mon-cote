@@ -4,15 +4,18 @@
 .Title {
 
   & h1 {
+
     @include mixins.colorShadow(variables.$color-title);
     color: variables.$color-title;
     font-weight: map-get(variables.$titleInfos, weight);
     font-size: map-get(variables.$titleInfos, size1);
     font-family: map-get(variables.$titleInfos, font);
     text-transform: uppercase;
+    margin-bottom: -1rem;
   }
 
   & h2 {
+    
     @include mixins.colorShadow(variables.$color-subtitle);
     @include mixins.titleStyle(variables.$titleInfos);    
     color: variables.$color-subtitle;
