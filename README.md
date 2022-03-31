@@ -1,2 +1,9 @@
-# sass-cest-mon-cote
-SSSPA* to indulge SASS as it's finest ! *(SillySassedSinglePageApp)
+# SASS C'EST MON COTÉ
+
+SSSPA* to indulge SASS ast it's finest ! *(SillySassedSinglePageApp)
+
+No trick to declare : React (without redux oc) / Typescript / Sass.
+Made to practice BEM & SASS.
+No back end.
+Simple.
+Easy.
